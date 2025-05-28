@@ -16,6 +16,7 @@
   ),
   comment-text-setting: (
     font: ("Georgia", "Adobe Kaiti Std R"),
+    size: 0.8em,
     weight: "light",
     fill: luma(30%),
   ),
@@ -89,12 +90,23 @@
     ruby(a, b, scale: 0.8)
   }
 
-  let re = regex("^[/](.+?)$")
-  show re: it => {
-    set align(right)
+  show regex("^[/](.+?)$"): it => {
+    let tl(_, ..xs) = xs
+    let grid-cfg = (
+      columns: (auto, 1fr),
+      align: (left, right),
+    )
+    let cat2((ans, tmp), x) = {
+      if tmp == none { (ans, x) } else {
+        ((..ans, grid(..grid-cfg, x, tmp,)), none)
+      }
+    }
+    let (ans, rest) = tl(..it.text.split("/")).pos().map(x => x.trim(" ")).fold(((), none), cat2)
+    let anss = if rest == none { ans } else {
+      (..ans, grid(..grid-cfg, [], rest,))
+    }
     set text(..comment-text-setting)
-    v(-0.8em)
-    it.text.match(re).captures.at(0)
+    grid(..anss)
   }
 
   show regex("[\u0400-\u04FF\u0500-\u052F\u2DE0-\u2DFF\uA640-\uA69F\u1C80-\u1C8F\u{1E030}-\u{1E08F}\u1D2B\u1D78\uFE2E\uFE2F]"): set text(
@@ -109,7 +121,7 @@
       + block(
         st.sum(),
         breakable: false,
-        width: 95%,
+        width: 101%,
       )
   )
 
