@@ -39,14 +39,18 @@
     ],
   )
 
+  // --------title---------
+
+  set align(center)
+
   set text(..info-text-settings)
 
   show heading: set text(..heading-text-settings)
 
-  set align(center)
-
   heading(title)
   v(1em)
+
+  // --------info---------
 
   set grid(row-gutter: 0.8em)
   let g = grid(
@@ -63,11 +67,13 @@
       .flatten()
   )
   let glen = 100%
+
   line(length: glen, stroke: 1pt + gray)
   g
   line(length: glen, stroke: 1pt + gray)
-
   v(1em)
+
+  // --------text---------
 
   let ruby(scale: 0.7, doc, ruby) = {
     box(
@@ -106,7 +112,8 @@
       (..ans, grid(..grid-cfg, [], rest,))
     }
     set text(..comment-text-setting)
-    grid(..anss)
+    v(-1em)
+    grid(..anss, row-gutter: 0.5em)
   }
 
   show regex("[\u0400-\u04FF\u0500-\u052F\u2DE0-\u2DFF\uA640-\uA69F\u1C80-\u1C8F\u{1E030}-\u{1E08F}\u1D2B\u1D78\uFE2E\uFE2F]"): set text(
