@@ -3,23 +3,10 @@
   title,
   raw-info,
   column-count: 2,
-  info-text-settings: (
-    font: ("Georgia", "Adobe Kaiti Std R"),
-  ),
-  heading-text-settings: (
-    font: ("Georgia", "Adobe Kaiti Std R"),
-    weight: "light",
-  ),
-  lyric-text-settings: (
-    font: ("LTCCaslonLongPro", "HGSGyoshotai"),
-    size: 1em,
-  ),
-  comment-text-setting: (
-    font: ("Georgia", "Adobe Kaiti Std R"),
-    size: 0.8em,
-    weight: "light",
-    fill: luma(30%),
-  ),
+  info-text-settings: (),
+  heading-text-settings: (),
+  lyric-text-settings: (),
+  comment-text-setting: (),
 ) = {
   set page(
     paper: "a4",
@@ -156,8 +143,38 @@
   )
 }
 
-#let lyrics-show(raw-info, title, ..settings) = {
-  let lam(content) = lyrics(content, title, raw-info, ..settings)
+#let lyrics-show(
+  raw-info,
+  title,
+  column-count: 2,
+  info-text-settings: (
+    font: ("Libertinus Serif", "Adobe Kaiti Std R"),
+    weight: "light",
+  ),
+  heading-text-settings: (
+    font: ("Libertinus Serif", "Adobe Kaiti Std R"),
+    weight: "light",
+  ),
+  lyric-text-settings: (
+    font: ("LTCCaslonLongPro", "HGSGyoshotai"),
+    size: 1em,
+  ),
+  comment-text-setting: (
+    font: ("Libertinus Serif", "Adobe Kaiti Std R"),
+    size: 0.8em,
+    weight: "light",
+    fill: luma(30%),
+  ),
+) = {
+  let lam(content) = lyrics(
+    content,
+    title,
+    raw-info,
+    info-text-settings: info-text-settings,
+    heading-text-settings: heading-text-settings,
+    lyric-text-settings: lyric-text-settings,
+    comment-text-setting: comment-text-setting,
+  )
   lam
 }
 
