@@ -1,4 +1,4 @@
-#import "lyrics-show.typ": lyrics-show
+#import "../lyrics-show.typ": lyrics-show
 
 #show: lyrics-show(```
 歌：存流＆明透

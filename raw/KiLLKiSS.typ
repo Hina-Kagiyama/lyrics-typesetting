@@ -1,4 +1,4 @@
-#import "lyrics-show.typ": lyrics-show, haiku
+#import "../lyrics-show.typ": lyrics-show, haiku
 
 #show: lyrics-show(```
 作詞：Diggy-MO'

@@ -1,4 +1,4 @@
-#import "lyrics-show.typ": lyrics-show
+#import "../lyrics-show.typ": lyrics-show
 
 #show: lyrics-show(```
 Композитор：Александра Пахмутова
@@ -11,7 +11,7 @@
 
 /时刻挂在我们心上，
 /Zabota u nas prostaya,
-/僕(ぼく)らには一つの
+/僕(ぼく)らには一(ひと)つの
 
 Забота наша такая:
 

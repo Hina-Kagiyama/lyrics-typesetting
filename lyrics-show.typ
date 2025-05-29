@@ -116,9 +116,15 @@
     grid(..anss, row-gutter: 0.5em)
   }
 
-  show regex("[\u0400-\u04FF\u0500-\u052F\u2DE0-\u2DFF\uA640-\uA69F\u1C80-\u1C8F\u{1E030}-\u{1E08F}\u1D2B\u1D78\uFE2E\uFE2F]"): set text(
-    font: "Noto Serif",
-  )
+  show regex(
+    "[\u0400-\u04FF"
+      + "\u0500-\u052F"
+      + "\u2DE0-\u2DFF"
+      + "\uA640-\uA69F"
+      + "\u1C80-\u1C8F"
+      + "\u{1E030}-\u{1E08F}"
+      + "\u1D2B\u1D78\uFE2E\uFE2F]",
+  ): set text(font: "Adelle Cyrillic")
 
   set text(..lyric-text-settings)
 
