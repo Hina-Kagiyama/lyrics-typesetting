@@ -26,6 +26,25 @@
     ],
   )
 
+  let ruby(scale: 0.7, doc, ruby) = {
+    box(
+      align(
+        bottom,
+        grid(
+          row-gutter: 0.3em,
+          align: center,
+          text(1em * scale, ruby), doc
+        ),
+      ),
+    )
+  }
+
+  let re = regex("([0-9]?[A-Za-z\u4e00-\u9fff\u30A0-\u30FF々]+)\(([：\w]+)\)")
+  show re: it => {
+    let (a, b) = it.text.match(re).captures
+    ruby(a, b, scale: 0.8)
+  }
+
   // --------title---------
 
   set align(center)
@@ -40,16 +59,36 @@
   // --------info---------
 
   set grid(row-gutter: 0.8em)
-  let g = grid(
+  let g = context grid(
     columns: (auto, auto),
-    align: (center, center),
+    align: center + bottom,
     column-gutter: 2em,
     ..raw-info
       .text
       .split("\n")
       .map(it => {
         let (a, b) = str(it).match(regex("^(.+?)：(.+?)$")).captures
-        (a, grid(align: center, row-gutter: 0.8em, ..b.split(",")))
+        let (c, ..d) = b
+          .split(",")
+          .map(x => {
+            let m = x.match(regex("^\[\[(.+?)\]\]$"))
+            if m != none {
+              (
+                grid.cell(
+                  m.captures.at(0),
+                  align: center + bottom,
+                ),
+                grid.hline(
+                  start: 1,
+                  position: bottom,
+                  stroke: 0.5pt + gray,
+                ),
+                v(-0.5em),
+                v(-0.5em),
+              )
+            } else { x }
+          })
+        ((a, c), ..d.fold((), (acc, x) => { (..acc, [], x) }))
       })
       .flatten()
   )
@@ -62,40 +101,27 @@
 
   // --------text---------
 
-  let ruby(scale: 0.7, doc, ruby) = {
-    box(
-      align(
-        bottom,
-        table(
-          inset: 0pt,
-          row-gutter: 0.3em,
-          stroke: none,
-          align: center,
-          text(1em * scale, ruby), doc
-        ),
-      ),
-    )
-  }
-
-  let re = regex("([0-9]?[\u4e00-\u9fff\u30A0-\u30FF々]+)\((\w+)\)")
-  show re: it => {
-    let (a, b) = it.text.match(re).captures
-    ruby(a, b, scale: 0.8)
-  }
-
   show regex("^[/](.+?)$"): it => {
     let tl(_, ..xs) = xs
     let grid-cfg = (
       columns: (auto, 1fr),
       align: (left, right),
     )
-    let cat2((ans, tmp), x) = {
-      if tmp == none { (ans, x) } else {
-        ((..ans, grid(..grid-cfg, x, tmp,)), none)
+    let cat2((ans, tmp, cnt), x) = {
+      if tmp == none { (ans, x, cnt + 1) } else {
+        ((..ans, grid(..grid-cfg, x, tmp,)), none, cnt + 1)
       }
     }
-    let (ans, rest) = tl(..it.text.split("/")).pos().map(x => x.trim(" ")).fold(((), none), cat2)
-    let anss = if rest == none { ans } else {
+    let (ans, rest, cnt) = tl(..it.text.split("/"))
+      .pos()
+      .map(x => x.trim(" ").trim("\n"))
+      .fold(
+        ((), none, 0),
+        cat2,
+      )
+    let anss = if rest == none { ans } else if cnt == 1 {
+      (..ans, grid(align: center, rest,))
+    } else {
       (..ans, grid(..grid-cfg, [], rest,))
     }
     set text(..comment-text-setting)
@@ -134,8 +160,10 @@
         .fold(
           ([], ()),
           ((acc, st), x) => {
-            if x != [--] { (acc, (..st, x)) } else {
+            if x == [--] {
               (aux((acc, st)), ())
+            } else {
+              (acc, (..st, x))
             }
           },
         ),

@@ -4,7 +4,7 @@
 作詞：Diggy-MO'
 作曲：長谷川大介（SUPA LOVE）,Diggy-MO'
 編曲：長谷川大介（SUPA LOVE）
-演唱：Doloris（CV.佐佐木李子）,Mortis（CV.渡瀨結月）,Timoris（CV.岡田夢以）,Amoris（CV.米澤茜）,Oblivionis（CV.高尾奏音）
+演唱：[[Ave Mujica]],Doloris(CV：佐佐木李子),Mortis(CV：渡瀨結月),Timoris(CV：岡田夢以),Amoris(CV：米澤茜),Oblivionis(CV：高尾奏音)
 BPM：200
 收錄單曲：KiLLKiSS
 收錄專輯：Completeness
@@ -38,6 +38,8 @@ BPM：200
 エネルギー(Energy)は　サイクル(Cycle)　そう　いまは
 
 無重力(むじゅうりょく)　象徴的(しょうちょうてき)な　パレード(Parade)
+
+--
 
 この月夜(つきよ)に　仰(あお)げよ　仰(あお)げ
 
