@@ -7,29 +7,21 @@
 编曲：悠木真一 
 ```)[I Believe What You Said]
 
-静かに
+静(しず)かに　震(ふる)わせる空気(くうき)
 
-/The quietness
+/The quietness, profoundly consuming silence
 
-震わせる空気
-
-/Profoundly consuming silence
-
-意味深な沈黙
+意味(いみ)深(しん)な沈黙(ちんもく)
 
 /Even the air is trembling
 
 --
 
-光の
+光(ひかり)の　歪曲(わいきょく)が満(み)ちて
 
-/All logic fades
+/All logic fades, leaving behind in its wake
 
-歪曲が満ちて
-
-/leaving behind in its wake
-
-失ったロジック
+失(うしな)ったロジック
 
 /A broken light, a bird without wings
 
@@ -37,121 +29,97 @@
 
 I believe what you said
 
-戻りたい場所
+--
+
+戻(もど)りたい場所(ばしょ)
 
 /Say you're longing to return
 
-明確な景色
+明確(めいかく)な景色(けしき)
 
 /To that once perfect scenery
 
 --
 
-あの子が欲しいと
+あの子(こ)が欲(ほ)しいと
 
 /If you desire the world
 
-あざ笑った
+あざ笑(わら)った
 
 /Then come and take it
 
 --
 
-ずっとキミの
+ずっとキミの喜(よろこ)びも
 
-/We are connected
+/We are connected within my memory
 
-喜びも
+ずっとキミの涙(なみだ)さえも
 
-/within my memory
-
---
-
-ずっとキミの
-
-/I feel all your tears
-
-涙さえも
-
-/Those sad or happy
+/I feel all your tears, those sad or happy
 
 --
 
-誰より身近な距離で
+誰(だれ)より身近(みぢか)な距離(きょり)で
 
 /No one can ever say that they're as close to you
 
-感じた記憶
+感(かん)じた記憶(きおく)
 
 /As me the way it should be
 
 --
 
-たった一つその答え
+たった一(ひと)つその答(こた)え
 
 /A door will open upon the answer
 
-探してた扉が今
+探(さが)してた扉(とびら)が今(いま)
 
-/To all our questions that we have searched for, 
-
-/now
+/To all our questions that we have searched for, now
 
 --
 
-ゆっくりと
+ゆっくりと開(ひら)かれた
 
-/I watch it open 
+/I watch it open to lead us at last
 
-開かれた
-
-/to lead us at last
-
-その先には
+その先(さき)には
 
 /Into the light it cast
 
 --
 
-眩しい光に
+眩(まぶ)しい光(ひかり)に
 
 /We will find truth beyond the lie
 
-包まれてゆく
+包(つつ)まれてゆく
 
 /Engulfed in light, bright as white
 
-全ての真実
+全(すべ)ての真実(しんじつ)
 
 /The secrets to everything
 
 --
 
-小さな
+小(ちい)さな　ほころびはやがて
 
-/A little tear
+/A little tear, makes everything unravel
 
-ほころびはやがて
-
-/Makes everything unravel
-
-偽りへ誘う
+偽(いつわ)りへ誘(いざな)う
 
 /That one mistake, inviting the lies
 
 --
 
-幾重に
+幾重(いくえ)に　繰(く)り返(かえ)す狂気(きょうき)
 
-/The madness grows
+/The madness grows, echoing into unknown
 
-繰り返す狂気
-
-/Echoing into unknown
-
---
-
-閉ざされたリフレイン
+閉(と)ざされたリフレイン(refrain)
 
 /Hidden away from all prying eyes
 
@@ -161,71 +129,57 @@ I believe what you said
 
 --
 
-目を覚ます頃
+目(め)を覚(さ)ます頃(ころ)
 
 /As you slowly awaken
 
-描かれた絵空
+--
+
+描(えが)かれた絵(え)空(そら)
 
 /You behold a false scenery
 
---
-
-祭りは静かに
+祭(まつ)りは静(しず)かに
 
 /The festival will ascend
 
-始まった
+始(はじ)まった
 
 /And begin before you
 
 --
 
-もっとキミを
+もっとキミを知(し)りたくて
 
-/I only wanted
+/I only wanted to know you better
 
-知りたくて
+もっとキミを追(お)いかけてた
 
-/to know you better
-
---
-
-もっとキミを
-
-/So I continued
-
-追いかけてた
-
-/To chase right after you
+/So I continued to chase right after you
 
 --
 
-不自然な
+不自然(ふしぜん)な
 
 /But there's tension
 
-素振りもなく
+素振(そぶ)りもなく
 
 /building up between our words
 
-交わした言葉
+交(か)わした言葉(ことば)
 
 /It's strange you're acting this way
 
 --
 
-この広い空さえも
+この広(ひろ)い空(そら)さえも
 
 /The sky above you won't shake or ripple
 
---
+作(つく)られた張(は)りぼてなら
 
-作られた張りぼてなら
-
-/But even if it were artificial,
-
-/then..
+/But even if it were artificial, then..
 
 --
 
@@ -233,104 +187,80 @@ I believe what you said
 
 /All of the pain that
 
---
-
-消えてゆく
+消(き)えてゆく
 
 /You feel would begin
 
---
-
-この痛みも
+この痛(いた)みも
 
 /To melt away at last
 
 --
 
-まるで麻酔のように
+まるで麻酔(ますい)のように
 
 /Just like a shot of anesthesia
 
 --
 
-堕ちる意識が
+堕(お)ちる意識(いしき)が
 
 /I slowly lose consciousness
 
-全てを始める
+全(すべ)てを始(はじ)める
 
 /The beginning of everything
 
 --
 
-ずっとキミの
+ずっとキミの喜(よろこ)びも
 
-/We are connected
+/We are connected within my memory
 
-喜びも
+ずっとキミの涙(なみだ)さえも
 
-/within my memory
-
-ずっとキミの
-
-/I feel all your tears
-
-涙さえも
-
-/Those sad or happy
+/I feel all your tears, those sad or happy
 
 --
 
-誰より身近な距離で
+誰(だれ)より身近(みぢか)な距離(きょり)で
 
 /No one can ever say that they're as close to you
 
-感じた記憶
+感(かん)じた記憶(きおく)
 
 /As me the way it should be
 
 --
 
-たった一つ
+たった一(ひと)つその答(こた)え
 
-/A door will open
+/A door will open upon the answer
 
-その答え
+探(さが)してた扉(とびら)が今(いま)
 
-/upon the answer
-
-探してた
-
-/To all our questions
-
-扉が今
-
-/that we have searched for, now
+/To all our questions that we have searched for, now
 
 --
 
-ゆっくりと
+ゆっくりと開(ひら)かれた
 
-/I watch it open
+/I watch it open, to lead us at last
 
-開かれた
-
-/To lead us at last
-
-その先には
+その先(さき)には
 
 /Into the light it cast
 
 --
 
-眩しい光に
+眩(まぶ)しい光(ひかり)に
 
 /We will find truth beyond the lie
 
-包まれてゆく
+包(つつ)まれてゆく
 
 /Engulfed in light, bright as white
 
-全ての真実
+全(すべ)ての真実(しんじつ)
 
 /The secrets to everything
