@@ -159,6 +159,8 @@ I believe what you said
 
 I believe what you said
 
+--
+
 目を覚ます頃
 
 /As you slowly awaken

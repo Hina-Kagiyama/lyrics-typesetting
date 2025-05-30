@@ -3,19 +3,14 @@
   title,
   raw-info,
   column-count: 2,
+  paper-and-margin: (),
   info-text-settings: (),
   heading-text-settings: (),
   lyric-text-settings: (),
   comment-text-setting: (),
 ) = {
   set page(
-    paper: "a4",
-    margin: (
-      left: 1.2cm,
-      right: 1.2cm,
-      top: 2cm,
-      bottom: 2cm,
-    ),
+    ..paper-and-margin,
     footer: context [
       #set align(right)
       #set text(8pt)
@@ -193,12 +188,20 @@
     weight: "light",
     fill: luma(30%),
   ),
+  paper: "a4",
+  margin: (
+    left: 1.2cm,
+    right: 1.2cm,
+    top: 2cm,
+    bottom: 2cm,
+  ),
 ) = {
   let lam(content) = lyrics(
     content,
     title,
     raw-info,
     column-count: column-count,
+    paper-and-margin: (paper: paper, margin: margin),
     info-text-settings: info-text-settings,
     heading-text-settings: heading-text-settings,
     lyric-text-settings: lyric-text-settings,
