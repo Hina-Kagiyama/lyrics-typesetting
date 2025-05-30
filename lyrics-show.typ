@@ -198,6 +198,7 @@
     content,
     title,
     raw-info,
+    column-count: column-count,
     info-text-settings: info-text-settings,
     heading-text-settings: heading-text-settings,
     lyric-text-settings: lyric-text-settings,
