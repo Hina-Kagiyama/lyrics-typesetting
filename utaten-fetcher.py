@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 
-if __name__ != '__main__':
+if __name__ != "__main__":
     sys.exit(0)
 
 try:
@@ -28,24 +28,30 @@ response.raise_for_status()  # Raise an error for bad status codes
 # Parse HTML with lxml's etree directly
 tree = etree.HTML(response.text)
 
-# XPath selector for inner content only
-sel = '/html/body/div[3]/div[1]/main/article/div[6]/div/div[1]/*'
-elements = tree.xpath(sel)
+# Find the only div with class="hiragana"
+elements = tree.xpath('//div[@class="hiragana"]')
 
 # Validate XPath result
 if not elements:
-    raise Exception("XPath did not match any elements.")
+    raise Exception("No element with class 'hiragana' found.")
+elif len(elements) > 1:
+    raise Exception(
+        "Multiple elements with class 'hiragana' found. Expected exactly one."
+    )
 
-# Convert elements to HTML string
-raw_html = ''.join([etree.tostring(el, encoding='unicode') for el in elements])
+# Get inner HTML of the matched div
+raw_html = "".join(
+    [etree.tostring(el, encoding="unicode", method="html") for el in elements[0]]
+)
 
 # Apply replacements
 processed_html = raw_html
-processed_html = processed_html.replace('<span class="ruby"><span class="rb">', '')
-processed_html = processed_html.replace('</span><span class="rt">', '(')
-processed_html = processed_html.replace('</span></span>', ')')
-processed_html = processed_html.replace('<br/>', '\n')
-processed_html = processed_html.replace('\n\n\n', '\n\n--\n')
+processed_html = processed_html.replace('<span class="ruby"><span class="rb">', "")
+processed_html = processed_html.replace('</span><span class="rt">', "(")
+processed_html = processed_html.replace("</span></span>", ")")
+processed_html = processed_html.replace("<br>", "\n")
+processed_html = processed_html.replace("<br/>", "\n")
+processed_html = processed_html.replace("\n\n\n", "\n\n--\n")
 
 # Output the cleaned-up string
 print(processed_html)
