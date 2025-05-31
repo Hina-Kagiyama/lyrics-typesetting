@@ -1,3 +1,24 @@
+#let ruby(scale: 0.7, doc, ruby) = {
+  box(
+    align(
+      bottom,
+      grid(
+        row-gutter: 0.3em,
+        align: center,
+        text(1em * scale, ruby), doc
+      ),
+    ),
+  )
+}
+
+#let haiku(hskip-ratio: 1, vskip-ratio: -1, ..arr) = context {
+  let aux((a, b), x) = (
+    a + measure(x).width * hskip-ratio,
+    b + linebreak() + v(measure(x).height * vskip-ratio) + h(a) + x,
+  )
+  box(align(left, arr.pos().fold((0cm, []), aux).at(1)))
+}
+
 #let lyrics(
   content,
   title,
@@ -20,19 +41,6 @@
       )
     ],
   )
-
-  let ruby(scale: 0.7, doc, ruby) = {
-    box(
-      align(
-        bottom,
-        grid(
-          row-gutter: 0.3em,
-          align: center,
-          text(1em * scale, ruby), doc
-        ),
-      ),
-    )
-  }
 
   let re = regex("([0-9]?(?:[A-Za-z]+|[\u4e00-\u9fff々]+|[\u30A0-\u30FF]+))\(([-：\w]+|[A-Za-z '-]+)\)")
   show re: it => {
@@ -208,12 +216,4 @@
     comment-text-setting: comment-text-setting,
   )
   lam
-}
-
-#let haiku(hskip-ratio: 1, vskip-ratio: -1, ..arr) = context {
-  let aux((a, b), x) = (
-    a + measure(x).width * hskip-ratio,
-    b + linebreak() + v(measure(x).height * vskip-ratio) + h(a) + x,
-  )
-  box(align(left, arr.pos().fold((0cm, []), aux).at(1)))
 }
