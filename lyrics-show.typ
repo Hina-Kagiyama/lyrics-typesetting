@@ -34,7 +34,7 @@
     )
   }
 
-  let re = regex("([0-9]?[A-Za-z\u4e00-\u9fff\u30A0-\u30FF々]+)\(([-：\w]+)\)")
+  let re = regex("([0-9]?(?:[A-Za-z]+|[\u4e00-\u9fff々]+|[\u30A0-\u30FF]+))\(([-：\w]+|[A-Za-z '-]+)\)")
   show re: it => {
     let (a, b) = it.text.match(re).captures
     ruby(a, b, scale: 0.8)
