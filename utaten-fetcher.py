@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+import re
 
 if __name__ != "__main__":
     sys.exit(0)
@@ -26,10 +27,8 @@ response = requests.get(url)
 response.raise_for_status()  # Raise an error for bad status codes
 
 # Parse HTML with lxml's etree directly
-tree = etree.HTML(response.text)
-
 # Find the only div with class="hiragana"
-elements = tree.xpath('//div[@class="hiragana"]')
+elements = etree.HTML(response.text).xpath('//div[@class="hiragana"]')
 
 # Validate XPath result
 if not elements:
@@ -39,19 +38,21 @@ elif len(elements) > 1:
         "Multiple elements with class 'hiragana' found. Expected exactly one."
     )
 
-# Get inner HTML of the matched div
-raw_html = "".join(
-    [etree.tostring(el, encoding="unicode", method="html") for el in elements[0]]
-)
-
 # Apply replacements
-processed_html = raw_html
-processed_html = processed_html.replace('<span class="ruby"><span class="rb">', "")
-processed_html = processed_html.replace('</span><span class="rt">', "(")
-processed_html = processed_html.replace("</span></span>", ")")
-processed_html = processed_html.replace("<br>", "\n")
-processed_html = processed_html.replace("<br/>", "\n")
-processed_html = processed_html.replace("\n\n\n", "\n\n--\n")
+processed_html = (
+    re.sub(
+        '<div class="hiragana">[\\s\\n ]*'
+        "|[\\s\\n ]*</div>"
+        '|<span class="ruby"><span class="rb">',
+        "",
+        etree.tostring(elements[0], encoding="unicode", method="html"),
+    )
+    .replace('</span><span class="rt">', "(")
+    .replace("</span></span>", ")")
+    .replace("<br>", "\n")
+    .replace("<br/>", "\n")
+    .replace("\n\n\n", "\n\n--\n")
+)
 
 # Output the cleaned-up string
 print(processed_html)
