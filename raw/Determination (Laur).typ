@@ -8,7 +8,6 @@ Composer：Laur
 Release Year：2021
 ```)[Determination (feat. 棗いつき)]
 
-
 永遠(とおわん)に血(ち)を鳴(な)らす
 
 揺(ゆ)るぎない憎(にく)しみを

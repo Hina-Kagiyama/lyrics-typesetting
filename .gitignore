@@ -1,2 +1,2 @@
-output
-dirty_mark.txt
+output*
+dirty_mark*.txt

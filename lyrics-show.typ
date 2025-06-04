@@ -29,6 +29,7 @@
   heading-text-settings: (),
   lyric-text-settings: (),
   comment-text-setting: (),
+  portable: false,
 ) = {
   set page(
     ..paper-and-margin,
@@ -149,7 +150,7 @@
       + v(2em, weak: true)
       + block(
         st.sum(),
-        breakable: false,
+        breakable: portable,
         width: 101%,
       )
   )
@@ -204,16 +205,30 @@
     bottom: 2cm,
   ),
 ) = {
-  let lam(content) = lyrics(
-    content,
-    title,
-    raw-info,
-    column-count: column-count,
-    paper-and-margin: (paper: paper, margin: margin),
-    info-text-settings: info-text-settings,
-    heading-text-settings: heading-text-settings,
-    lyric-text-settings: lyric-text-settings,
-    comment-text-setting: comment-text-setting,
-  )
-  lam
+  if "portable" in sys.inputs.keys() and sys.inputs.at("portable") == "true" {
+    content => lyrics(
+      content,
+      title,
+      raw-info,
+      column-count: 1,
+      paper-and-margin: (paper: "jis-b5", margin: margin),
+      info-text-settings: info-text-settings,
+      heading-text-settings: heading-text-settings,
+      lyric-text-settings: (font: ("LTCCaslonLongPro", "HGSGyoshotai"), size: 1.5em),
+      comment-text-setting: comment-text-setting,
+      portable: true,
+    )
+  } else {
+    content => lyrics(
+      content,
+      title,
+      raw-info,
+      column-count: column-count,
+      paper-and-margin: (paper: paper, margin: margin),
+      info-text-settings: info-text-settings,
+      heading-text-settings: heading-text-settings,
+      lyric-text-settings: lyric-text-settings,
+      comment-text-setting: comment-text-setting,
+    )
+  }
 }
